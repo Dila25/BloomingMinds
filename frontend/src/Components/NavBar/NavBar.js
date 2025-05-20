@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import './NavBar.css'
 
 function NavBar() {
@@ -7,6 +7,27 @@ function NavBar() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [mobileDropdown1, setMobileDropdown1] = useState(false);
     const [mobileDropdown2, setMobileDropdown2] = useState(false);
+    const [logoVisible, setLogoVisible] = useState(false);
+    const [navVisible, setNavVisible] = useState([false, false, false, false, false, false, false]);
+    const [btnVisible, setBtnVisible] = useState(false);
+    const [containerVisible, setContainerVisible] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => setLogoVisible(true), 100);
+        navVisible.forEach((_, idx) => {
+            setTimeout(() => {
+                setNavVisible(prev => {
+                    const updated = [...prev];
+                    updated[idx] = true;
+                    return updated;
+                });
+            }, 400 + idx * 120);
+        });
+        setTimeout(() => setBtnVisible(true), 400 + navVisible.length * 120 + 100);
+        setTimeout(() => setContainerVisible(true), 10);
+        // eslint-disable-next-line
+    }, []);
+
     const handleSidebarNavClick = () => {
         setSidebarOpen(false);
     };
@@ -16,9 +37,11 @@ function NavBar() {
     };
 
     return (
-        <div className='nav_full_container'>
+        <div className={`nav_full_container${containerVisible ? ' nav_full_container-in' : ''}`}>
             <div className='nav_container'>
-                <p className='logo'><span className='logoB'>B</span>looming<span className='logoM'>M</span>inds</p>
+                <p className={`logo nav-anim${logoVisible ? ' nav-anim-in' : ''}`}>
+                    <span className='logoB'>B</span>looming<span className='logoM'>M</span>inds
+                </p>
 
                 {/* Hamburger Icon for mobile */}
                 <div className={`burger${sidebarOpen ? ' open' : ''}`} onClick={toggleSidebar}>
@@ -29,9 +52,9 @@ function NavBar() {
 
                 {/* Desktop Nav Items */}
                 <div className='navitem_con'>
-                    <p className='nav_item active'>Home</p>
+                    <p className={`nav_item active nav-anim${navVisible[0] ? ' nav-anim-in' : ''}`}>Home</p>
                     <div
-                        className='nav_item_drop nav_item_dropdown'
+                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[1] ? ' nav-anim-in' : ''}`}
                         onMouseEnter={() => setShowDropdown(true)}
                         onMouseLeave={() => setShowDropdown(false)}
                         style={{ position: 'relative', display: 'inline-block' }}
@@ -59,9 +82,9 @@ function NavBar() {
                             </div>
                         )}
                     </div>
-                    <p className='nav_item'>Milestones</p>
+                    <p className={`nav_item nav-anim${navVisible[2] ? ' nav-anim-in' : ''}`}>Milestones</p>
                     <div
-                        className='nav_item_drop nav_item_dropdown'
+                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[3] ? ' nav-anim-in' : ''}`}
                         onMouseEnter={() => setShowDropdown2(true)}
                         onMouseLeave={() => setShowDropdown2(false)}
                         style={{ position: 'relative', display: 'inline-block' }}
@@ -84,11 +107,11 @@ function NavBar() {
                             </div>
                         )}
                     </div>
-                    <p className='nav_item'>About Us</p>
-                    <p className='nav_item'>Achievements</p>
-                    <p className='nav_item'>Contact Us</p>
+                    <p className={`nav_item nav-anim${navVisible[4] ? ' nav-anim-in' : ''}`}>About Us</p>
+                    <p className={`nav_item nav-anim${navVisible[5] ? ' nav-anim-in' : ''}`}>Achievements</p>
+                    <p className={`nav_item nav-anim${navVisible[6] ? ' nav-anim-in' : ''}`}>Contact Us</p>
                 </div>
-                <button className='nav_btn'>
+                <button className={`nav_btn nav-anim${btnVisible ? ' nav-anim-in' : ''}`}>
                     <span>Lets Talk</span>
                     <svg
                         strokeWidth="2"

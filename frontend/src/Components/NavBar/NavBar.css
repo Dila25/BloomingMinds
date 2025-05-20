@@ -14,6 +14,12 @@
   align-items: center;
   justify-content: center;
   position: fixed;
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav_full_container.nav_full_container-in {
+  opacity: 1;
 }
 
 .nav_container {
@@ -181,7 +187,7 @@
 }
 
 .burger span:nth-of-type(1) {
-   height: 3px;
+  height: 3px;
   top: 0px;
   transform-origin: left center;
 }
@@ -194,14 +200,14 @@
 }
 
 .burger span:nth-of-type(3) {
-   height: 2px;
+  height: 2px;
   top: 100%;
   transform-origin: left center;
   transform: translateY(-100%);
 }
 
 .burger.open span:nth-of-type(1) {
-   height: 2px;
+  height: 2px;
   transform: rotate(45deg);
   top: 0px;
   left: 5px;
@@ -271,6 +277,18 @@
   height: 100vh;
   z-index: 100;
   display: block;
+}
+
+/* Animation for nav bar logo, items, and button */
+.nav-anim {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-anim-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* Responsive rules */
