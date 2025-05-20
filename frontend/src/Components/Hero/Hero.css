@@ -1,9 +1,108 @@
-.hero_back{
-    background-image: url('./img/bk.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero_back {
+  background-color: white;
+  width: 1440px;
+  margin: 0 auto;
+  padding: 105px 50px 15px 50px;
+}
+.hero_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.hero_colum {
+  flex: 1;
+}
+.lft_cont_topic {
+  font-size: 80px;
+  font-weight: 600;
+}
+.lft_pera {
+  font-size: 17px;
+  font-weight: 400;
+  color: #484747;
+  width: 85%;
+}
+.hero_colum_lft {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-direction: column;
+}
+.hero_colum_lft_img {
+  background-image: url("./img/favicon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 50px;
+  box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5);
+}
+.hero_colum_righ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  flex-direction: column;
+}
+.hero_colum_righ_section_one {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.hero_colum_righ_section_two {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.hero_colum_righ_card {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 26px;
+  box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
+    inset -5px -5px 16px 0px rgba(145, 192, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+.hero_colum_righ_card_one {
+  background-image: url("./img/one.jpg");
+  width: 250px;
+  height: 250px;
+}
+.hero_colum_righ_card_two {
+  background-image: url("./img/two.jpg");
+  width: 200px;
+  height: 200px;
+}
+.hero_colum_righ_card_thre {
+  background-image: url("./img/thre.jpg");
+  width: 200px;
+  height: 200px;
+}
+.hero_colum_righ_card_four {
+  background-image: url("./img/for.jpg");
+  width: 250px;
+  height: 250px;
+}
+.lernbtn {
+  color: white;
+  background-color: black;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px 45px;
+  text-align: start;
+  margin-top: 20px;
 }
