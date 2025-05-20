@@ -1,0 +1,9 @@
+.hero_back{
+    background-image: url('./img/bk.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
