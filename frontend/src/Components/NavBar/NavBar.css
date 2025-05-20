@@ -40,9 +40,17 @@
   color: inherit;
   transition: color 0.2s ease-in;
 }
+.nav_item_drop {
+  position: relative;
+  color: inherit;
+  transition: color 0.2s ease-in;
+  cursor: pointer;
+  font-weight: 500;
+  color: #1c1b1b;
+}
 
 .nav_item:hover {
-  color: #fdd416;
+  color: #2b69b2;
 }
 
 .nav_item::after {
@@ -52,7 +60,7 @@
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: #fdd416;
+  background-color: #2b69b2;
   transition: width 0.3s ease-in-out;
 }
 
@@ -104,7 +112,14 @@
   font-size: 20px;
   transition: all 0.4s ease-in;
 }
-
+.arrow {
+  margin-left: 5px;
+  transition: transform 0.3s;
+   transform: rotate(-90deg);
+}
+.arrow-rotated {
+  transform: rotate(0deg);
+}
 .nav_btn:hover > svg {
   font-size: 1.3em;
   transform: translateX(5px);
@@ -112,4 +127,32 @@
 
 .nav_btn:hover {
   box-shadow: 9px 9px 33px #d1d1d1, -9px -9px 33px #ffffff;
+}
+.dropdown_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 280px;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dropdown_menu2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  width: 150px;
+  border-radius: 4px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
