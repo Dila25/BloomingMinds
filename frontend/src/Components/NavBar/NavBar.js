@@ -73,7 +73,6 @@ function NavBar() {
                         </svg>
                         {showDropdown && (
                             <div className='dropdown_menu'>
-                                <p className='nav_item'>Literature Survey</p>
                                 <p className='nav_item'>Research Gap</p>
                                 <p className='nav_item'>Research Problem & Solution</p>
                                 <p className='nav_item'>Research Objectives</p>
@@ -161,7 +160,6 @@ function NavBar() {
                             </div>
                             {mobileDropdown1 && (
                                 <div className='mobile_dropdown'>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Literature Survey</p>
                                     <p className='nav_item' onClick={handleSidebarNavClick}>Research Gap</p>
                                     <p className='nav_item' onClick={handleSidebarNavClick}>Research Problem & Solution</p>
                                     <p className='nav_item' onClick={handleSidebarNavClick}>Research Objectives</p>

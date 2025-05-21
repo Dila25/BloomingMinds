@@ -87,7 +87,6 @@ function Hero() {
         <motion.div className='hero_colum' variants={itemVariants}>
           <div className='hero_colum_lft'>
             <motion.div 
-              className='hero_colum_lft_img'
               variants={imageVariants}
               whileHover={{ rotate: 5 }}
             ></motion.div>

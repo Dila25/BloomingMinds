@@ -1,6 +1,6 @@
 /* Hero.css */
 .hero_back {
-  background-color: #f9fafb;
+  background-color: #e8eff6;
   width: 100%;
   margin: 0 auto;
   padding: 120px 50px;
@@ -39,10 +39,9 @@
 }
 
 .lft_cont_topic {
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: 700;
   line-height: 1.1;
-  margin: 20px 0;
   background: linear-gradient(90deg, #000000 0%, #000000 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -154,14 +153,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3),
-    0 2px 4px -1px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 4px 6px -1px rgba(70, 136, 229, 0.3),
+    0 2px 4px -1px rgba(70, 139, 229, 0.2);
   transition: all 0.3s ease;
 }
 
 .lernbtn:hover {
-  box-shadow: 0 10px 15px -3px rgba(0, 42, 252, 0.4),
-    0 4px 6px -2px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 10px 15px -3px rgba(0, 134, 252, 0.4),
+    0 4px 6px -2px rgba(70, 107, 229, 0.2);
 }
 
 .btn_arrow {
