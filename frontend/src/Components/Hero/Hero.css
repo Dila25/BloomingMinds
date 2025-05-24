@@ -1,6 +1,6 @@
 /* Hero.css */
 .hero_back {
-  background-color: #e8eff6;
+  /* background-color: #e8eff6; */
   width: 100%;
   margin: 0 auto;
   padding: 120px 50px;
@@ -39,24 +39,30 @@
 }
 
 .lft_cont_topic {
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: 1.1;
-  background: linear-gradient(90deg, #000000 0%, #000000 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: -1px;
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  background: none;
+  color: #22223b;
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  text-shadow: 0 2px 8px rgba(43, 105, 178, 0.07);
+  transition: color 0.2s;
 }
 
 .logoB {
   color: #2b69b2;
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
 }
 
 .logoM {
   color: #fdd416;
-  font-weight: 800;
+  font-weight: 900;
+  font-size: 1.1em;
+  letter-spacing: 0.5px;
 }
 
 .lft_pera {
@@ -118,25 +124,25 @@
 }
 
 .hero_colum_righ_card_one {
-  background-image: url("./img/one.jpg");
-  width: 280px;
-  height: 280px;
+  background-image: url("./img/Picture1.png");
+  width: 580px;
+  height: 380px;
 }
 
 .hero_colum_righ_card_two {
-  background-image: url("./img/two.jpg");
+  background-image: url("./img/Picture1.png");
   width: 220px;
   height: 220px;
 }
 
 .hero_colum_righ_card_thre {
-  background-image: url("./img/thre.jpg");
+  background-image: url("./img/Picture1.png");
   width: 220px;
   height: 220px;
 }
 
 .hero_colum_righ_card_four {
-  background-image: url("./img/for.jpg");
+  background-image: url("./img/Picture1.png");
   width: 280px;
   height: 280px;
 }
@@ -190,7 +196,8 @@
   }
 
   .lft_cont_topic {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    margin-bottom: 14px;
   }
 
   .lft_pera {
@@ -226,7 +233,8 @@
   }
 
   .lft_cont_topic {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
   }
 
   .lft_pera {
@@ -245,3 +253,4 @@
     height: 160px;
   }
 }
+

@@ -75,6 +75,54 @@ function Hero() {
     }
   };
 
+  // Add for letter animation
+  const letterVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.04,
+        duration: 0.4,
+        type: "spring",
+        stiffness: 400,
+        damping: 20
+      }
+    })
+  };
+
+  // Helper to wrap each letter in a motion.span
+  const renderAnimatedHeader = () => {
+    const text = [
+      { letter: 'B', className: 'logoB' },
+      { letter: 'l', className: '' },
+      { letter: 'o', className: '' },
+      { letter: 'o', className: '' },
+      { letter: 'm', className: '' },
+      { letter: 'i', className: '' },
+      { letter: 'n', className: '' },
+      { letter: 'g', className: '' },
+      { letter: ' ', className: '' },
+      { letter: 'M', className: 'logoM' },
+      { letter: 'i', className: '' },
+      { letter: 'n', className: '' },
+      { letter: 'd', className: '' },
+      { letter: 's', className: '' }
+    ];
+    return text.map((item, i) => (
+      <motion.span
+        key={i}
+        className={item.className}
+        custom={i}
+        variants={letterVariants}
+        initial="hidden"
+        animate={controls}
+      >
+        {item.letter}
+      </motion.span>
+    ));
+  };
+
   return (
     <div className='hero_back' ref={ref}>
       <div className='hero_background_pattern'></div>
@@ -91,9 +139,9 @@ function Hero() {
               whileHover={{ rotate: 5 }}
             ></motion.div>
             
-            <motion.p className='lft_cont_topic' variants={itemVariants}>
-              <span className='logoB'>B</span>looming<span className='logoM'> M</span>inds
-            </motion.p>
+            <p className='lft_cont_topic'>
+              {renderAnimatedHeader()}
+            </p>
             
             <motion.p className='lft_pera' variants={itemVariants}>
               Revolutionizing e-learning for Down syndrome learners using VARK theory. 
@@ -117,40 +165,10 @@ function Hero() {
         <motion.div className='hero_colum' variants={itemVariants}>
           <div className='hero_colum_righ'>
             <motion.div 
-              className='hero_colum_righ_section_one'
-              initial={{ x: 50 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <motion.div 
-                className='hero_colum_righ_card_one hero_colum_righ_card'
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3 }}
-              />
-              <motion.div 
-                className='hero_colum_righ_card_two hero_colum_righ_card'
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-              />
-            </motion.div>
-            
-            <motion.div 
-              className='hero_colum_righ_section_two'
-              initial={{ x: -50 }}
-              animate={{ x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <motion.div 
-                className='hero_colum_righ_card_thre hero_colum_righ_card'
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-              />
-              <motion.div 
-                className='hero_colum_righ_card_four hero_colum_righ_card'
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3, delay: 0.3 }}
-              />
-            </motion.div>
+              className='hero_colum_righ_card_one hero_colum_righ_card'
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            />
           </div>
         </motion.div>
       </motion.div>
