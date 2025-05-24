@@ -7,6 +7,9 @@
   gap: 20px;
   overflow: hidden;
 }
+.with_set{
+  width: 100%;
+}
 
 .color_con{
   width: 100%;

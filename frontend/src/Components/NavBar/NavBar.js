@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './NavBar.css'
 
-function NavBar() {
+function NavBar({ onNavigate, activeSection }) {
     const [showDropdown, setShowDropdown] = useState(false);
     const [showDropdown2, setShowDropdown2] = useState(false);
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -52,9 +52,14 @@ function NavBar() {
 
                 {/* Desktop Nav Items */}
                 <div className='navitem_con'>
-                    <p className={`nav_item active nav-anim${navVisible[0] ? ' nav-anim-in' : ''}`}>Home</p>
+                    <p
+                        className={`nav_item${activeSection === 'home' ? ' active' : ''} nav-anim${navVisible[0] ? ' nav-anim-in' : ''}`}
+                        onClick={() => onNavigate && onNavigate('home')}
+                    >
+                        Home
+                    </p>
                     <div
-                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[1] ? ' nav-anim-in' : ''}`}
+                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[1] ? ' nav-anim-in' : ''}${activeSection === 'projectScope' ? ' active' : ''}`}
                         onMouseEnter={() => setShowDropdown(true)}
                         onMouseLeave={() => setShowDropdown(false)}
                         style={{ position: 'relative', display: 'inline-block' }}
@@ -73,17 +78,26 @@ function NavBar() {
                         </svg>
                         {showDropdown && (
                             <div className='dropdown_menu'>
-                                <p className='nav_item'>Research Gap</p>
-                                <p className='nav_item'>Research Problem & Solution</p>
-                                <p className='nav_item'>Research Objectives</p>
-                                <p className='nav_item'>Methodology</p>
-                                <p className='nav_item'>Technologies</p>
+                                <p className={`nav_item${activeSection === 'projectScope.researchGap' ? ' active' : ''} `} onClick={() => onNavigate && onNavigate('projectScope.researchGap')}>Research Gap</p>
+
+                                <p className={`nav_item${activeSection === 'projectScope.researchProblem' ? ' active' : ''} `} onClick={() => onNavigate && onNavigate('projectScope.researchProblem')}>Research Problem & Solution</p>
+
+                                <p className={`nav_item${activeSection === 'projectScope.researchObjectives' ? ' active' : ''} `} onClick={() => onNavigate && onNavigate('projectScope.researchObjectives')}>Research Objectives</p>
+
+                                <p className={`nav_item${activeSection === 'projectScope.methodology' ? ' active' : ''} `} onClick={() => onNavigate && onNavigate('projectScope.methodology')}>Methodology</p>
+
+                                <p className={`nav_item${activeSection === 'projectScope.technologies' ? ' active' : ''} `} onClick={() => onNavigate && onNavigate('projectScope.technologies')}>Technologies</p>
                             </div>
                         )}
                     </div>
-                    <p className={`nav_item nav-anim${navVisible[2] ? ' nav-anim-in' : ''}`}>Milestones</p>
+                    <p
+                        className={`nav_item${activeSection === 'milestones' ? ' active' : ''} nav-anim${navVisible[2] ? ' nav-anim-in' : ''}`}
+                        onClick={() => onNavigate && onNavigate('milestones')}
+                    >
+                        Milestones
+                    </p>
                     <div
-                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[3] ? ' nav-anim-in' : ''}`}
+                        className={`nav_item_drop nav_item_dropdown nav-anim${navVisible[3] ? ' nav-anim-in' : ''}${activeSection === 'downloads' ? ' active' : ''}`}
                         onMouseEnter={() => setShowDropdown2(true)}
                         onMouseLeave={() => setShowDropdown2(false)}
                         style={{ position: 'relative', display: 'inline-block' }}
@@ -101,15 +115,25 @@ function NavBar() {
                         </svg>
                         {showDropdown2 && (
                             <div className='dropdown_menu2'>
-                                <p className='nav_item'>Documents</p>
-                                <p className='nav_item'>Presentations</p>
+                                <p className='nav_item' onClick={() => onNavigate && onNavigate('downloads.documents')}>Documents</p>
+                                <p className='nav_item' onClick={() => onNavigate && onNavigate('downloads.presentations')}>Presentations</p>
                             </div>
                         )}
                     </div>
-                    <p className={`nav_item nav-anim${navVisible[4] ? ' nav-anim-in' : ''}`}>About Us</p>
-                    <p className={`nav_item nav-anim${navVisible[6] ? ' nav-anim-in' : ''}`}>Contact Us</p>
+                    <p
+                        className={`nav_item${activeSection === 'aboutUs' ? ' active' : ''} nav-anim${navVisible[4] ? ' nav-anim-in' : ''}`}
+                        onClick={() => onNavigate && onNavigate('aboutUs')}
+                    >
+                        About Us
+                    </p>
+                    <p
+                        className={`nav_item${activeSection === 'contactUs' ? ' active' : ''} nav-anim${navVisible[6] ? ' nav-anim-in' : ''}`}
+                        onClick={() => onNavigate && onNavigate('contactUs')}
+                    >
+                        Contact Us
+                    </p>
                 </div>
-                <button className={`nav_btn nav-anim${btnVisible ? ' nav-anim-in' : ''}`}>
+                <button className={`nav_btn nav-anim${btnVisible ? ' nav-anim-in' : ''}`} onClick={() => onNavigate && onNavigate('contactUs')}>
                     <span>Lets Talk</span>
                     <svg
                         strokeWidth="2"
@@ -139,10 +163,18 @@ function NavBar() {
                 {/* Mobile Sidebar */}
                 <div className={`mobile_sidebar${sidebarOpen ? ' open' : ''}`}>
                     <div className="mobile_sidebar_content">
-                        <p className='nav_item active' onClick={handleSidebarNavClick}>Home</p>
+                        <p
+                            className={`nav_item${activeSection === 'home' ? ' active' : ''}`}
+                            onClick={() => {
+                                handleSidebarNavClick();
+                                onNavigate && onNavigate('home');
+                            }}
+                        >
+                            Home
+                        </p>
                         <div className='nav_item_drop'>
                             <div
-                                className='nav_item'
+                                className={`nav_item${activeSection === 'projectScope' ? ' active' : ''}`}
                                 onClick={() => setMobileDropdown1(!mobileDropdown1)}
                                 style={{ display: 'flex', alignItems: 'center' }}
                             >
@@ -159,18 +191,23 @@ function NavBar() {
                             </div>
                             {mobileDropdown1 && (
                                 <div className='mobile_dropdown'>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Research Gap</p>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Research Problem & Solution</p>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Research Objectives</p>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Methodology</p>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Technologies</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('projectScope.researchGap'); }}>Research Gap</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('projectScope.researchProblem'); }}>Research Problem & Solution</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('projectScope.researchObjectives'); }}>Research Objectives</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('projectScope.methodology'); }}>Methodology</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('projectScope.technologies'); }}>Technologies</p>
                                 </div>
                             )}
                         </div>
-                        <p className='nav_item' onClick={handleSidebarNavClick}>Milestones</p>
+                        <p
+                            className={`nav_item${activeSection === 'milestones' ? ' active' : ''}`}
+                            onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('milestones'); }}
+                        >
+                            Milestones
+                        </p>
                         <div className='nav_item_drop'>
                             <div
-                                className='nav_item'
+                                className={`nav_item${activeSection === 'downloads' ? ' active' : ''}`}
                                 onClick={() => setMobileDropdown2(!mobileDropdown2)}
                                 style={{ display: 'flex', alignItems: 'center' }}
                             >
@@ -187,13 +224,23 @@ function NavBar() {
                             </div>
                             {mobileDropdown2 && (
                                 <div className='mobile_dropdown'>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Documents</p>
-                                    <p className='nav_item' onClick={handleSidebarNavClick}>Presentations</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('downloads.documents'); }}>Documents</p>
+                                    <p className='nav_item' onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('downloads.presentations'); }}>Presentations</p>
                                 </div>
                             )}
                         </div>
-                        <p className='nav_item' onClick={handleSidebarNavClick}>About Us</p>
-                        <p className='nav_item' onClick={handleSidebarNavClick}>Contact Us</p>
+                        <p
+                            className={`nav_item${activeSection === 'aboutUs' ? ' active' : ''}`}
+                            onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('aboutUs'); }}
+                        >
+                            About Us
+                        </p>
+                        <p
+                            className={`nav_item${activeSection === 'contactUs' ? ' active' : ''}`}
+                            onClick={() => { handleSidebarNavClick(); onNavigate && onNavigate('contactUs'); }}
+                        >
+                            Contact Us
+                        </p>
                         <button className='nav_btn' style={{ marginTop: '20px' }} onClick={handleSidebarNavClick}>
                             <span>Lets Talk</span>
                             <svg
