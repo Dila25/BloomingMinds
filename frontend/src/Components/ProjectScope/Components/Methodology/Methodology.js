@@ -5,7 +5,17 @@ function Methodology() {
         <div className='research_gap_con'>
             <div className='subCom_topic'>
                 <p className='sub_topic'>Methodology</p>
-                <p Solution>Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is </p>
+                <p Solution>The proposed adaptive e-learning platform consists of five main components. They are:
+
+Cognitive, linguistic, visual, and motor challenges analysis
+
+Personalized content adaptation based on VARK learning styles
+
+Handwriting and speech recognition using machine learning models
+
+Multi-sensory interactive learning modules development
+
+User feedback collection and performance evaluation</p>
             </div>
             <div className='research_gap_card_con'>
                 <div className='card_left'>
@@ -14,7 +24,15 @@ function Methodology() {
                     </div>
                 </div>
                 <div className='card_oright'>
-                    <p>Fig 4 illustrates the overall system diagram of the proposed solution which was intended to provide a smart approach for stakeholders, researchers, and Coconut Development Officers (CDOs) to detect the coconut diseases and pest infestations that may affect the coconut industry. As shown in the diagram, the registered users of the system can capture or upload the images which are suspicious. The images are sent to the Amazon Web Services (AWS) backend server where the flask server is deployed. These images are processed in the flask server by the designed DCNN models for disease identification. If WCLWD is found, the symptom severity will be determined using CNN models. Simultaneously, if CCI is identified, the images will go through the Mask-R-CNN model to determine the progression level while the number of caterpillars are extracted using the YOLOv5 object detection algorithm. Images will be classified using the CNN models of Mg deficiency and LSD at the same time.</p>
+                    <p>Fig X illustrates the overall system architecture of the proposed solution designed to provide an individualized and engaging learning experience for children with Down Syndrome. As shown in the diagram, users access the platform through a user-friendly interface where they interact with personalized lessons and activities tailored to their learning style and progress.
+
+The system collects input data from user interactions and speech or handwriting samples, which are processed by the backend server deploying machine learning algorithms such as CNN, LSTM, SVM, and Reinforcement Learning models. These models analyze learning patterns and provide personalized content adjustments in real time.
+
+Simultaneously, interactive multi-sensory modules deliver content in auditory, visual, reading/writing, and kinesthetic formats to support diverse learning needs. The platform tracks user progress and engagement, storing data securely for continuous adaptation.
+
+Finally, educators and caregivers provide feedback through integrated surveys and reports, allowing the system to evaluate and improve learning outcomes continuously.
+
+</p>
                 </div>
             </div>
         </div>

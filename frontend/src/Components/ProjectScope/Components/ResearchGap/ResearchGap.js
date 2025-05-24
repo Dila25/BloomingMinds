@@ -4,18 +4,18 @@ import './ResearchGap.css'
 const researchGapCards = [
   {
     iconClass: 'research_gap_card_icon',
-    topic: 'Identification & classification',
-    pera: 'There are no records of a smart solution for coconut pest and disease identification and classification in Sri Lanka. Symptoms of coconut disorders show similar characteristic appearance and therefore it is a challenge to provide a solution.'
+    topic: 'Lack of Personalization',
+    pera: 'Most platforms offer one-size-fits-all content without adapting to individual learning needs, reducing effectiveness for learners with Down Syndrome.'
   },
   {
     iconClass: 'research_gap_card_icon_two',
-    topic: 'Identification & classification',
-    pera: 'There are no records of a smart solution for coconut pest and disease identification and classification in Sri Lanka. Symptoms of coconut disorders show similar characteristic appearance and therefore it is a challenge to provide a solution.'
+    topic: 'Limited Multisensory Learning',
+    pera: 'Tools often focus on just one mode (visual or audio) and miss out on engaging multiple senses, which is crucial for children with diverse learning styles.'
   },
   {
     iconClass: 'research_gap_card_icon_thre',
-    topic: 'Identification & classification',
-    pera: 'There are no records of a smart solution for coconut pest and disease identification and classification in Sri Lanka. Symptoms of coconut disorders show similar characteristic appearance and therefore it is a challenge to provide a solution.'
+    topic: 'Poor Feedback & Tracking',
+    pera: 'Real-time progress tracking and feedback are often missing, making it hard for educators and parents to support and monitor learners effectively.'
   }
 ];
 
