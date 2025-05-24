@@ -74,12 +74,6 @@ function ResearchObjectives() {
         >
           Research Objectives
         </motion.p>
-        <motion.p 
-          className='sub_pera'
-          variants={itemVariants}
-        >
-          Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
-        </motion.p>
       </motion.div>
 
       <motion.div 
@@ -93,7 +87,6 @@ function ResearchObjectives() {
             className='obj_card'
             key={index}
             variants={itemVariants}
-            whileHover={hoverEffect}
             custom={index}
           >
             <div className='obj_number'>{index + 1}</div>

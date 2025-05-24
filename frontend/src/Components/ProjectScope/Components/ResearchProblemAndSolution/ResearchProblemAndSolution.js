@@ -54,12 +54,6 @@ function ResearchProblemAndSolution() {
         >
           Research Problem & Solution
         </motion.p>
-        <motion.p 
-          className='sub_pera'
-          variants={itemVariants}
-        >
-          Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is 
-        </motion.p>
       </motion.div>
 
       <motion.div 
@@ -68,7 +62,7 @@ function ResearchProblemAndSolution() {
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
       >
-        <motion.div 
+        <div 
           className='card_left'
           variants={itemVariants}
           whileHover={hoverEffect}
@@ -91,12 +85,11 @@ function ResearchProblemAndSolution() {
           >
             In Sri Lanka, approximately 1 in every 800 births is a child with Down syndrome, contributing to an estimated 15,000–20,000 individuals living with the condition across the country. Studies show that up to 70% of individuals with Down syndrome have moderate to severe hearing loss or auditory processing delays, which critically affect their speech development, comprehension, and learning capabilities.
           </motion.p>
-        </motion.div>
+        </div>
 
         <motion.div 
           className='card_oright'
           variants={itemVariants}
-          whileHover={hoverEffect}
         >
           <motion.iframe 
             src="https://www.youtube.com/embed/fHgyXi6gzHs?si=jqU5xlbHNhyrxBaC" 

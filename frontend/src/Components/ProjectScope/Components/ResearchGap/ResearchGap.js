@@ -61,14 +61,7 @@ function ResearchGap() {
         transition={{ duration: 0.6 }}
       >
         <p className='sub_topic'>Research Gap</p>
-        <motion.p 
-          className='sub_pera'
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ delay: 0.3, duration: 0.6 }}
-        >
-          Following areas are the research gaps found in most of the recent researches.
-        </motion.p>
+       
       </motion.div>
       
       <div className='research_gap_card_con'>
@@ -79,7 +72,6 @@ function ResearchGap() {
             initial="offscreen"
             animate={inView ? "onscreen" : {}}
             variants={cardVariants}
-            whileHover={hoverEffect}
             custom={idx}
             transition={{ delay: idx * 0.1 }}
           >
