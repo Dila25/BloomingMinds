@@ -3,15 +3,21 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import './Technologies.css';
 import ReactIcon from './icons/react.png'
+import PythonIcon from './icons/python.png'
+import TensorFlowIcon from './icons/TensorFlow.png'
+import KerasIcon from './icons/Keras.png'
+import MongoDBIcon from './icons/MongoDB.png'
+import JWTIcon from './icons/JWT.png'
+import OpenCVIcon from './icons/OpenCV.png'
+
 const technologies = [
     { name: "React", icon: ReactIcon },
-    { name: "Python", icon: ReactIcon },
-    { name: "TensorFlow", icon: ReactIcon },
-    { name: "Keras", icon: ReactIcon },
-    { name: "MongoDB", icon: ReactIcon },
-    { name: "Google Cloud", icon: ReactIcon },
-    { name: "JWT", icon: ReactIcon },
-    { name: "OpenCV", icon: ReactIcon }
+    { name: "Python", icon: PythonIcon },
+    { name: "TensorFlow", icon: TensorFlowIcon },
+    { name: "Keras", icon: KerasIcon },
+    { name: "MongoDB", icon: MongoDBIcon },
+    { name: "JWT", icon: JWTIcon },
+    { name: "OpenCV", icon: OpenCVIcon }
 ];
 
 function Technologies() {

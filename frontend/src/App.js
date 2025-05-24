@@ -5,6 +5,8 @@ import ProjectScope from './Components/ProjectScope/ProjectScope'
 import Milestones from './Components/Milestones/Milestones';
 import Downloads from './Components/Downloads/Downloads';
 import AboutUs from './Components/AboutUs/AboutUs';
+import ContactUs from './Components/ContactUs/ContactUs'
+import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <div>
@@ -12,9 +14,11 @@ function App() {
       <div className='full_page_con'>
         <Hero />
         <ProjectScope />
-        <Milestones/>
-        <Downloads/>
-        <AboutUs/>
+        <Milestones />
+        <Downloads />
+        <AboutUs />
+        <ContactUs />
+        <Footer/>
       </div>
     </div>
   );

@@ -107,7 +107,6 @@ function NavBar() {
                         )}
                     </div>
                     <p className={`nav_item nav-anim${navVisible[4] ? ' nav-anim-in' : ''}`}>About Us</p>
-                    <p className={`nav_item nav-anim${navVisible[5] ? ' nav-anim-in' : ''}`}>Achievements</p>
                     <p className={`nav_item nav-anim${navVisible[6] ? ' nav-anim-in' : ''}`}>Contact Us</p>
                 </div>
                 <button className={`nav_btn nav-anim${btnVisible ? ' nav-anim-in' : ''}`}>
@@ -194,7 +193,6 @@ function NavBar() {
                             )}
                         </div>
                         <p className='nav_item' onClick={handleSidebarNavClick}>About Us</p>
-                        <p className='nav_item' onClick={handleSidebarNavClick}>Achievements</p>
                         <p className='nav_item' onClick={handleSidebarNavClick}>Contact Us</p>
                         <button className='nav_btn' style={{ marginTop: '20px' }} onClick={handleSidebarNavClick}>
                             <span>Lets Talk</span>

@@ -1,0 +1,152 @@
+.supervisors_section,
+.team_section{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5px;
+}
+.team_grid{
+  padding-bottom: 25px;
+}
+.section_header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.section_header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.section_icon {
+  font-size: 1.8rem;
+  color: #2b69b2;
+}
+
+.supervisors_grid, .team_grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.profile_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(43, 105, 178, 0.1);
+  transition: all 0.3s ease;
+}
+
+.profile_image_container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 3px solid rgba(43, 105, 178, 0.2);
+}
+
+.profile_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.profile_name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.profile_role {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2b69b2;
+  margin: 0;
+}
+
+.profile_institution, .profile_department {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #666;
+  margin: 0;
+}
+
+.profile_links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.profile_link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(43, 105, 178, 0.1);
+  color: #2b69b2;
+  transition: all 0.3s ease;
+}
+
+.profile_link:hover {
+  background-color: #2b69b2;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.link_icon {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about_container {
+    padding: 60px 20px;
+  }
+  
+  .sub_topic {
+    font-size: 1.8rem;
+  }
+  
+  .supervisors_grid, .team_grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .profile_image_container {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .supervisors_grid, .team_grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section_header h2 {
+    font-size: 1.3rem;
+  }
+}
