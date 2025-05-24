@@ -152,6 +152,9 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .progress-bar-outer{
+    width: 100%;
+  }
   .sub_container {
     padding: 60px 20px;
   }
@@ -165,7 +168,7 @@
   }
 
   .timeline_dot {
-    left: -28px;
+    left: -6px;
   }
 
   .mil_card {
@@ -187,7 +190,7 @@
   }
 
   .timeline_dot {
-    left: -23px;
+    left: -5px;
     width: 14px;
     height: 14px;
   }

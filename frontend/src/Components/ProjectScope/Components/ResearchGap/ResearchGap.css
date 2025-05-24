@@ -7,11 +7,11 @@
   gap: 20px;
   overflow: hidden;
 }
-.with_set{
+.with_set {
   width: 100%;
 }
 
-.color_con{
+.color_con {
   width: 100%;
   background-color: #2b6ab214;
   padding: 50px 0;
@@ -38,7 +38,7 @@
 }
 
 .sub_topic::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -122,7 +122,6 @@
   z-index: 1;
 }
 
-
 .research_gap_card_topic {
   font-size: 1.2rem;
   font-weight: 600;
@@ -143,25 +142,29 @@
 
 @media (max-width: 1024px) {
   .research_gap_card_con {
+    width: 100%;
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-  
+
   .research_gap_card {
-    min-width: calc(50% - 20px);
+    width: 100%;;
   }
 }
 
 @media (max-width: 768px) {
   .research_gap_card {
     min-width: 100%;
-  max-width: 450px;
+    max-width: 450px;
     margin: 0 auto;
   }
-  
+
   .sub_topic {
     font-size: 1.8rem;
   }
-  
+
   .sub_pera {
     font-size: 1rem;
   }

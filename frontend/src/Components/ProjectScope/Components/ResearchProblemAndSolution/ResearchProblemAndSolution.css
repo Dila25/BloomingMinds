@@ -92,6 +92,7 @@
   
   .card_left, .card_oright {
     width: 100%;
+    flex: none;
   }
   
   .iframe_card {

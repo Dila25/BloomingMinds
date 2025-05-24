@@ -295,7 +295,7 @@
 }
 
 /* Responsive rules */
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
   .nav_container {
     padding: 10px 16px;
     width: 100%;
