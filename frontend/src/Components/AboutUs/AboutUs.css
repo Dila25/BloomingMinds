@@ -125,11 +125,7 @@
   .about_container {
     padding: 60px 20px;
   }
-  
-  .sub_topic {
-    font-size: 1.8rem;
-  }
-  
+
   .supervisors_grid, .team_grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;

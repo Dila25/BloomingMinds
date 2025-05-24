@@ -4,11 +4,13 @@ import Documents from './Components/Documents/Documents'
 import Presentations from './Components/Presentations/Presentations'
 function Downloads() {
   return (
-    <div className='sub_container'>
-      <p className='topic'>Downloads</p>
-      <div className='pro_comp_con'>
-        <Documents />
-        <Presentations />
+    <div className='color_con'>
+      <div className='sub_container'>
+        <p className='topic'>Downloads</p>
+        <div className='pro_comp_conM'>
+          <Documents />
+          <Presentations />
+        </div>
       </div>
     </div>
   )

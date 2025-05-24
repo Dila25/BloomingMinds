@@ -1,47 +1,58 @@
-.mil_card_con {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+/* Milestones.css */
+.timeline_container {
   position: relative;
+  width: 100%;
+  padding-left: 30px;
+  margin-top: 40px;
+}
+
+.timeline_line {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: #2b69b2;
+  border-radius: 2px;
+}
+
+.timeline_item {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.timeline_dot {
+  position: absolute;
+  left: -5px;
+  top: 20px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fdd416;
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #2b69b2;
+  z-index: 1;
 }
 
 .mil_card {
   position: relative;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
   padding: 30px;
-  margin-bottom: 40px;
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #2b69b2;
+  border-right: 4px solid #fdd416;
   transition: all 0.3s ease;
+  margin-left: 25px;
   transform: translateY(20px);
-  opacity: 0;
 }
 
 .motion .mil_card {
   transform: translateY(0);
   opacity: 1;
-}
-
-.mil_card::before {
-  content: "";
-  position: absolute;
-  top: 40px;
-  left: -40px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: #2b69b2;
-  border: 4px solid white;
-  box-shadow: 0 0 0 4px rgba(43, 105, 178, 0.2);
-  z-index: 1;
-  transform: scale(0);
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
-
-.motion .mil_card::before {
-  transform: scale(1);
 }
 
 .mil_card:hover {
@@ -51,9 +62,11 @@
 }
 
 .mil_topic {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #2b69b2;
+  font-size: 1rem;
+  display: flex;
+  font-weight: 400;
+  color: black;
+  text-transform: uppercase;
   margin-bottom: 8px;
 }
 
@@ -65,7 +78,7 @@
   line-height: 1.3;
 }
 
-.mil_card p {
+.mil_desc {
   font-size: 1rem;
   font-weight: 400;
   color: #555;
@@ -73,10 +86,68 @@
   margin-bottom: 10px;
 }
 
-.mil_card p:last-child {
+.mil_marks {
+  font-size: 1rem;
   font-weight: 500;
-  color: #e74c3c;
+  color: #000000;
   margin-bottom: 0;
+}
+
+.progress-bar-outer {
+  background: #e0e7ef;
+  border-radius: 8px;
+  height: 15px;
+  width: 50%;
+  margin: 10px 0 0 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-inner {
+  background: linear-gradient(90deg, #2b69b2 80%, #5fa8e6 100%);
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.progress-bar-label {
+  position: relative;
+  z-index: 2;
+}
+
+.progress-bar-inner.shine::after {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  height: 100%;
+  width: 60px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  animation: shine-bar 1s linear;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes shine-bar {
+  0% {
+    left: -60px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 /* Responsive Design */
@@ -85,20 +156,16 @@
     padding: 60px 20px;
   }
 
-  .topic {
-    font-size: 1.8rem;
+  .timeline_container {
+    padding-left: 20px;
   }
 
-  .mil_card_con {
-    padding-left: 40px;
-  }
-
-  .mil_card_con::before {
+  .timeline_line {
     left: 20px;
   }
 
-  .mil_card::before {
-    left: -30px;
+  .timeline_dot {
+    left: -28px;
   }
 
   .mil_card {
@@ -111,17 +178,21 @@
 }
 
 @media (max-width: 480px) {
-  .mil_card_con {
-    padding-left: 30px;
+  .timeline_container {
+    padding-left: 15px;
   }
 
-  .mil_card_con::before {
+  .timeline_line {
     left: 15px;
   }
 
-  .mil_card::before {
-    left: -25px;
-    width: 16px;
-    height: 16px;
+  .timeline_dot {
+    left: -23px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .mil_card {
+    padding: 20px;
   }
 }

@@ -59,9 +59,7 @@
     padding: 60px 20px;
   }
   
-  .sub_topic {
-    font-size: 1.8rem;
-  }
+  
   
   .technologies_grid {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));

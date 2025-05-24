@@ -92,7 +92,7 @@ function ResearchProblemAndSolution() {
           variants={itemVariants}
         >
           <motion.iframe 
-            src="https://www.youtube.com/embed/fHgyXi6gzHs?si=jqU5xlbHNhyrxBaC" 
+            src="https://www.youtube.com/embed/QD_iIT9CeW8?si=VQeqvE-Z8osSGZZY" 
             title="YouTube video player" 
             frameBorder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

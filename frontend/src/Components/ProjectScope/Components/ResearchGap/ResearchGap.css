@@ -8,7 +8,11 @@
   overflow: hidden;
 }
 
-
+.color_con{
+  width: 100%;
+  background-color: #2b6ab214;
+  padding: 50px 0;
+}
 .subCom_topic {
   width: 100%;
   display: flex;

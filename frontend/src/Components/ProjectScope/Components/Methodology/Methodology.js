@@ -55,36 +55,11 @@ function Methodology() {
                 >
                     Methodology
                 </motion.p>
-                <motion.p
-                    className='sub_pera'
-                    variants={itemVariants}
-                >
-                    The proposed adaptive e-learning platform consists of five main components:
-                </motion.p>
-                <motion.ul
-                    className='methodology_list'
-                    variants={containerVariants}
-                >
-                    {[
-                        "Cognitive, linguistic, visual, and motor challenges analysis",
-                        "Personalized content adaptation based on VARK learning styles",
-                        "Handwriting and speech recognition using machine learning models",
-                        "Multi-sensory interactive learning modules development",
-                        "User feedback collection and performance evaluation"
-                    ].map((item, index) => (
-                        <motion.li
-                            key={index}
-                            variants={itemVariants}
-                            className='methodology_list_item'
-                        >
-                            {item}
-                        </motion.li>
-                    ))}
-                </motion.ul>
+
             </motion.div>
 
             <motion.div
-                className='research_gap_card_con'
+                className='Methodo_card_con'
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
                 variants={containerVariants}
@@ -112,6 +87,32 @@ function Methodology() {
                     variants={itemVariants}
                 >
                     <motion.p
+                        className='sub_pera'
+                        variants={itemVariants}
+                    >
+                        The proposed adaptive e-learning platform consists of five main components:
+                    </motion.p>
+                    <motion.ul
+                        className='methodology_list'
+                        variants={containerVariants}
+                    >
+                        {[
+                            "Cognitive, linguistic, visual, and motor challenges analysis",
+                            "Personalized content adaptation based on VARK learning styles",
+                            "Handwriting and speech recognition using machine learning models",
+                            "Multi-sensory interactive learning modules development",
+                            "User feedback collection and performance evaluation"
+                        ].map((item, index) => (
+                            <motion.li
+                                key={index}
+                                variants={itemVariants}
+                                className='methodology_list_item'
+                            >
+                                {item}
+                            </motion.li>
+                        ))}
+                    </motion.ul>
+                    <motion.p
                         className='methodology_description'
                         variants={itemVariants}
                     >
@@ -128,14 +129,6 @@ function Methodology() {
                         variants={itemVariants}
                     >
                         Simultaneously, interactive multi-sensory modules deliver content in auditory, visual, reading/writing, and kinesthetic formats to support diverse learning needs. The platform tracks user progress and engagement, storing data securely for continuous adaptation.
-                    </motion.p>
-                    <motion.p
-                        className='methodology_description'
-                        variants={itemVariants}
-                    >
-                        The system is cloud-based, ensuring easy access across devices and environments like home or school. Its modular design also allows integration with other educational tools and assistive technologies for greater flexibility.
-
-
                     </motion.p>
                     <motion.p
                         className='methodology_description'

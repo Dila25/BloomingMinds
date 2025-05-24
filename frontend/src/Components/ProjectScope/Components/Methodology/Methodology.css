@@ -1,4 +1,3 @@
-
 .methodology_list {
   width: 100%;
   display: flex;
@@ -17,14 +16,12 @@
   transition: all 0.3s ease;
 }
 
-
-
 .card_leftM {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 16px;
+  padding: 10px;
   gap: 5px;
   background-color: #ffffff;
   flex-direction: column;
@@ -32,12 +29,21 @@
   overflow: hidden;
 }
 
-
-.meth_img_card {
-  background-image: url("./img/gw.png");
+.Methodo_card_con {
   width: 100%;
-  height:660px;
-  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  z-index: 1;
+}
+.meth_img_card {
+  background-image: url("./img/sd.png");
+  width: 100%;
+  height: 660px;
+  border-radius: 16px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -47,8 +53,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  border-radius: 16px;
+  gap: 8px;
   background-color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -67,8 +72,6 @@
 }
 
 @media (max-width: 1024px) {
-
-  
   .meth_img_card {
     height: 350px;
   }
@@ -78,20 +81,16 @@
   .research_gap_con {
     padding: 60px 20px;
   }
-  
-  .sub_topic {
-    font-size: 1.8rem;
-  }
-  
+
   .meth_img_card {
     height: 250px;
   }
-  
+
   .methodology_list_item {
     font-size: 0.95rem;
     padding-left: 20px;
   }
-  
+
   .methodology_description {
     font-size: 0.95rem;
   }
