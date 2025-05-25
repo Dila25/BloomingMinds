@@ -5,36 +5,37 @@ import './Documents.css';
 
 // Mock data for documents
 const documents = [
-  {
-    id: 1,
-    title: "Topic Assessment",
-    submittedDate: "2021/02/25",
-    type: "Group Submission",
-    link: "https://drive.google.com/document/1",
-    icon: "📝"
-  },
+  
   {
     id: 2,
     title: "Project Proposal",
-    submittedDate: "2021/03/15",
+    submittedDate: "2025/08/16",
     type: "Group Submission",
-    link: "https://drive.google.com/document/2",
+    link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F1%2E%20Project%20Proposal&ga=1",
     icon: "📑"
   },
   {
     id: 3,
-    title: "Literature Review",
-    submittedDate: "2021/04/10",
+    title: "Checklist",
+    submittedDate: "2025/01/10",
     type: "Individual Submission",
-    link: "https://drive.google.com/document/3",
+    link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F7%2E%20Checklist%20Documents&ga=1",
     icon: "📚"
   },
-  {
+   {
     id: 4,
-    title: "Final Report",
-    submittedDate: "2021/12/05",
+    title: "Research Paper",
+    submittedDate: "2025/03/20",
     type: "Group Submission",
-    link: "https://drive.google.com/document/4",
+    link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F4%2E%20Research%20Paper&ga=1",
+    icon: "📄"
+  },
+   {
+    id: 5,
+    title: "Final Report",
+    submittedDate: "2025/03/20",
+    type: "Group Submission",
+    link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F5%2E%20Final%20Report&ga=1",
     icon: "📄"
   }
 ];

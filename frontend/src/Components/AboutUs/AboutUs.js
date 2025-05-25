@@ -45,9 +45,9 @@ function AboutUs() {
       name: "Sanjeevi Chandrasiri",
       role: "Supervisor",
       institution: "Sri Lanka Institute of Information Technology",
-      department: "Information Systems Engineering",
-      email: "samank@gmail.com",
-      linkedin: "https://linkedin.com/in/samank",
+      department: "Faculty of Computing | Information Technology",
+      email: "sanji.c@sliit.lk",
+      linkedin: "https://www.linkedin.com/in/sanjeevi-chandrasiri-6154b319?originalSubdomain=lk",
       image: Sanjeevi
     },
     {
@@ -55,9 +55,9 @@ function AboutUs() {
       name: "Buddhima Attanayaka",
       role: "Co-Supervisor",
       institution: "Sri Lanka Institute of Information Technology",
-      department: "Computer Systems Engineering",
-      email: "nimalp@slit.ac.lk",
-      linkedin: "https://linkedin.com/in/nimalp",
+      department: "Faculty of Computing | Computer Systems Engineering",
+      email: "buddhima.a@sliit.lk",
+      linkedin: "https://www.linkedin.com/in/buddhima-attanayaka-b2131a61/?originalSubdomain=lk",
       image: Buddhima
     }
   ];
@@ -65,38 +65,38 @@ function AboutUs() {
   const teamMembers = [
     {
       id: 1,
-      name: "Alex Johnson",
+      name: "Suren Sandaruwan",
       role: "Team Leader",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "dilshan@email.com",
+      email: "it21203244@my.sliit.lk",
       linkedin: "https://linkedin.com/in/dilshan",
       image: suren
     },
     {
       id: 2,
-      name: "John Smith",
+      name: "Janithya Dias",
       role: "Frontend Developer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "john@email.com",
-      linkedin: "https://linkedin.com/in/john",
+      email: "it21203176@my.sliit.lk",
+      linkedin: "https://www.linkedin.com/in/js-dias/",
       image: janithya
     },
     {
       id: 3,
-      name: "Jane Doe",
+      name: "Shamindi Hettisinghe",
       role: "Backend Developer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "jane@email.com",
-      linkedin: "https://linkedin.com/in/jane",
+      email: "it21203558@my.sliit.lk",
+      linkedin: "https://www.linkedin.com/in/shamindi-3b5632215/",
       image: shamindi
     },
     {
       id: 4,
-      name: "Alex Johnson",
+      name: "Dilshan Priyawansha",
       role: "UI/UX Designer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "alex@email.com",
-      linkedin: "https://linkedin.com/in/alex",
+      email: "it21203176@my.sliit.lk",
+      linkedin: "https://www.linkedin.com/in/dilshan-priyawansha/",
       image: Dilshan
     }
   ];

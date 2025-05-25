@@ -6,34 +6,27 @@ import { useInView } from 'react-intersection-observer';
 const documents = [
     {
         id: 1,
-        title: "Topic Assessment",
-        submittedDate: "2021/02/25",
+        title: "Progress Presentation - I",
+        submittedDate: "2024/12/05",
         type: "Group Submission",
-        link: "https://drive.google.com/document/1",
+        link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F2%2E%20Progress%20Presentation%20%2D%20I&ga=1",
         icon: "📝"
     },
     {
         id: 2,
-        title: "Project Proposal",
-        submittedDate: "2021/03/15",
+        title: "Progress Presentation - I",
+        submittedDate: "2025/03/19",
         type: "Group Submission",
-        link: "https://drive.google.com/document/2",
+        link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F3%2E%20Progress%20Presentation%20%2D%20II&ga=1",
         icon: "📑"
     },
-    {
-        id: 3,
-        title: "Literature Review",
-        submittedDate: "2021/04/10",
-        type: "Individual Submission",
-        link: "https://drive.google.com/document/3",
-        icon: "📚"
-    },
+    
     {
         id: 4,
-        title: "Final Report",
-        submittedDate: "2021/12/05",
+        title: "Final Presentation",
+        submittedDate: "2025/05/28",
         type: "Group Submission",
-        link: "https://drive.google.com/document/4",
+        link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F6%2E%20Final%20Presentation%20%26%20Viva&ga=1",
         icon: "📄"
     }
 ];

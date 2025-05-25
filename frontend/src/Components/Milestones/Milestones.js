@@ -34,49 +34,50 @@ function Milestones() {
 
   const milestones = [
     {
-      date: "March 2021",
+      date: "Auguest 2024",
       title: "Project Proposal",
       description: "A Project Proposal is presented to potential sponsors or clients to receive funding or get your project approved.",
       marks: "Marks Allocated: 90"
     },
     {
-      date: "June 2021",
+      date: "December 2024",
       title: "Progress Presentation I",
       description: "Progress Presentation I reviews the 50% completetion status of the project. This reveals any gaps or inconsistencies in the design/requirements.",
       marks: "Marks Allocated: 38"
     },
     {
-      date: "July 2021",
+      date: "March 2025",
       title: "Research Paper",
       description: "Describes what you contribute to existing knowledge, giving due recognition to all work that you referred in making new knowledge",
       marks: "Marks Allocated: 30"
     },
     {
-      date: "September 2021",
+      date: "March 2025",
       title: "Progress Presentation II",
       description: "Progress Presentation II reviews the 90% completetion status demonstration of the project. Along with a Poster presesntation which describes the project as a whole.",
       marks: "Marks Allocated: 42"
     },
-    {
-      date: "October 2021",
-      title: "Website Assessment",
-      description: "The Website helps to promote our research project and reveals all details related to the project.",
-      marks: "Marks Allocated: 74"
-    },
-    {
-      date: "November 2021",
-      title: "Logbook",
-      description: "Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.",
-      marks: "Marks Allocated: 60"
-    },
-    {
-      date: "November 2021",
+     {
+      date: "April 2025",
       title: "Final Report",
       description: "Final Report evalutes the completed project done throughout the year. Marks mentioned below includes marks for Individual & group reports and also Final report.",
       marks: "Marks Allocated: 50"
     },
     {
-      date: "November 2021",
+      date: "May 2025",
+      title: "Website Assessment",
+      description: "The Website helps to promote our research project and reveals all details related to the project.",
+      marks: "Marks Allocated: 74"
+    },
+    {
+      date: "May 2025",
+      title: "Logbook",
+      description: "Status of the project is validated through the Logbook. This also includes, Status documents 1 & 2.",
+      marks: "Marks Allocated: 60"
+    },
+   
+    {
+      date: "May 2025",
       title: "Final Presentation & Viva",
       description: "Viva is held individually to assess each members contribution to the project.",
       marks: "Marks Allocated: 35"
