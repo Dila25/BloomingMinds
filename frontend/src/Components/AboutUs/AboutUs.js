@@ -68,8 +68,8 @@ function AboutUs() {
       name: "Suren Sandaruwan",
       role: "Team Leader",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "it21203244@my.sliit.lk",
-      linkedin: "https://linkedin.com/in/dilshan",
+      email: "sandaruwan222@gmail.com",
+      linkedin: "https://linkedin.com/in/suren%20vithanage",
       image: suren
     },
     {
@@ -77,7 +77,7 @@ function AboutUs() {
       name: "Janithya Dias",
       role: "Frontend Developer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "it21203176@my.sliit.lk",
+      email: "ahjssdias@gmail.com",
       linkedin: "https://www.linkedin.com/in/js-dias/",
       image: janithya
     },
@@ -86,7 +86,7 @@ function AboutUs() {
       name: "Shamindi Hettisinghe",
       role: "Backend Developer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "it21203558@my.sliit.lk",
+      email: "hansikashamindi1211@gmail.com",
       linkedin: "https://www.linkedin.com/in/shamindi-3b5632215/",
       image: shamindi
     },
@@ -95,7 +95,7 @@ function AboutUs() {
       name: "Dilshan Priyawansha",
       role: "UI/UX Designer",
       institution: "Sri Lanka Institute of Information Technology",
-      email: "it21203176@my.sliit.lk",
+      email: "dilshanpriyawansha0@gmail.com",
       linkedin: "https://www.linkedin.com/in/dilshan-priyawansha/",
       image: Dilshan
     }
@@ -149,7 +149,10 @@ function AboutUs() {
                   <p className='profile_institution'>{supervisor.institution}</p>
                   <p className='profile_department'>{supervisor.department}</p>
                   <div className='profile_links'>
-                    <a href={`mailto:${supervisor.email}`} className='profile_link'>
+                    <a
+                      href={`mailto:${supervisor.email}?subject=Hello&body=Hello%2C`}
+                      className='profile_link'
+                    >
                       <FaEnvelope className='link_icon' />
                     </a>
                     <a href={supervisor.linkedin} target="_blank" rel="noopener noreferrer" className='profile_link'>
@@ -192,7 +195,10 @@ function AboutUs() {
                   {/* <p className='profile_role'>{member.role}</p> */}
                   <p className='profile_institution'>{member.institution}</p>
                   <div className='profile_links'>
-                    <a href={`mailto:${member.email}`} className='profile_link'>
+                    <a
+                      href={`mailto:${member.email}?subject=Hello&body=Hello%2C`}
+                      className='profile_link'
+                    >
                       <FaEnvelope className='link_icon' />
                     </a>
                     <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className='profile_link'>
