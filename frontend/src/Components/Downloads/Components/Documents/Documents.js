@@ -5,7 +5,7 @@ import './Documents.css';
 
 // Mock data for documents
 const documents = [
-  
+
   {
     id: 2,
     title: "Project Proposal",
@@ -22,20 +22,22 @@ const documents = [
     link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F7%2E%20Checklist%20Documents&ga=1",
     icon: "📚"
   },
-   {
+  {
     id: 4,
     title: "Research Paper",
     submittedDate: "2025/03/20",
     type: "Group Submission",
     link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F4%2E%20Research%20Paper&ga=1",
+    pdf: "/PDF/ReserchPepar.pdf",
     icon: "📄"
   },
-   {
+  {
     id: 5,
     title: "Final Report",
     submittedDate: "2025/03/20",
     type: "Group Submission",
     link: "https://mysliit-my.sharepoint.com/personal/it21203176_my_sliit_lk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fit21203176%5Fmy%5Fsliit%5Flk%2FDocuments%2FWEBSITE%20DOCS%2FWEBSITE%20DOCS%2F5%2E%20Final%20Report&ga=1",
+    pdf: "/PDF/FinalReport.pdf",
     icon: "📄"
   }
 ];
@@ -80,13 +82,13 @@ function Documents() {
 
   return (
     <div className='research_gap_con' ref={ref}>
-      <motion.div 
+      <motion.div
         className='subCom_topic'
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
       >
-        <motion.p 
+        <motion.p
           className='sub_topic'
           variants={itemVariants}
         >
@@ -94,14 +96,14 @@ function Documents() {
         </motion.p>
       </motion.div>
 
-      <motion.div 
+      <motion.div
         className='documents_grid'
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
         variants={containerVariants}
       >
         {documents.map((doc) => (
-          <motion.div 
+          <motion.div
             className='document_card'
             key={doc.id}
             variants={itemVariants}
@@ -114,17 +116,31 @@ function Documents() {
                 <span className='document_date'>{doc.submittedDate}</span>
                 <span className='document_type'>{doc.type}</span>
               </p>
-              <a 
-                href={doc.link} 
-                target="_blank" 
+              <a
+                href={doc.link}
+                target="_blank"
                 rel="noopener noreferrer"
                 className='document_link'
               >
-                View Document
+                Document Link
                 <svg className='link_arrow' viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </a>
+              {/* Only show "View Document" for id 4 and 5 */}
+              {(doc.id === 4 || doc.id === 5) && (
+                <a
+                  href={doc.pdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className='document_link'
+                >
+                  View Document
+                  <svg className='link_arrow' viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              )}
             </div>
           </motion.div>
         ))}
