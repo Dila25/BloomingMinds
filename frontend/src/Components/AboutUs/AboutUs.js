@@ -8,6 +8,7 @@ import Buddhima from './IMG/BuddhimaAttanayaka.jpeg';
 import suren from './IMG/SurenSandaruwan.png';
 import janithya from './IMG/JanithyaDias.png';
 import shamindi from './IMG/ShamindiHettisinghe.jpg';
+import Supun from './IMG/supunPremarathane.jpg';
 import { FaEnvelope, FaLinkedin, FaUserTie, FaUsers } from 'react-icons/fa';
 
 function AboutUs() {
@@ -59,6 +60,16 @@ function AboutUs() {
       email: "buddhima.a@sliit.lk",
       linkedin: "https://www.linkedin.com/in/buddhima-attanayaka-b2131a61/?originalSubdomain=lk",
       image: Buddhima
+    },    
+    {
+      id: 3,
+      name: "Supun Premarathana",
+      role: "External-Supervisor",
+      institution: "Teaching Hospital Anuradhapura",
+      department: "Down syndrome - Diagnosis and treatment",
+      email: "supun.d@tha.lk",
+      linkedin: "",
+      image: Supun
     }
   ];
 
